@@ -5,12 +5,18 @@ Job varchar(255),
 Mgr INT,
 Hiderdate date,
 Sal INT,
-Comm INT,
-deptno INT 
-FOREIGN KEY (deptno) REFERENCES EMP (deptno));
+Comm INT);
 
-#ADD new column 
-
+#ADD new column#
 ALTER TABLE EMP 
 ADD deptno INT; 
 
+#CREATE A NEW_TABLE#
+CREATE TABLE DEPT(
+Deptno INT PRIMARY KEY,
+Dname INT NOT NULL,
+Location INT);
+
+#ADD FOREIGN_KEY#
+ALTER TABLE EMP
+ADD FOREIGN KEY (deptno) REFERENCES DEPT(deptno);

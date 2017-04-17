@@ -8,3 +8,9 @@ Sal INT,
 Comm INT,
 deptno INT 
 FOREIGN KEY (deptno) REFERENCES EMP (deptno));
+
+#ADD new column 
+
+ALTER TABLE EMP 
+ADD deptno INT; 
+
